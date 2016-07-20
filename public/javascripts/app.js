@@ -25,4 +25,6 @@ app.controller( 'IndexController', function( $scope ) {
 app.controller( 'AuthorController', function( $scope ) {
 	$scope.view = {};
 	$scope.view.greeting = "AUTHORS ARE BORING";
+	$scope.blah = function() {}
+
 } )
