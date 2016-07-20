@@ -12,6 +12,11 @@ app.config( function( $routeProvider, $locationProvider, $httpProvider ) {
 			controller: 'AuthorController',
 			controllerAs: 'authors'
 		} )
+		.when( '/books', {
+			templateUrl: '/views/templates/books.html',
+			controller: 'BookController',
+			controllerAs: 'books'
+		} )
 	$locationProvider.html5Mode( {
 		enabled: true,
 		requireBase: false
@@ -19,7 +24,8 @@ app.config( function( $routeProvider, $locationProvider, $httpProvider ) {
 } )
 app.controller( 'IndexController', function( $scope ) {
 	$scope.view = {};
-	$scope.view.greeting = "Test";
+	$scope.view.bookHover = false;
+	$scope.view.authorHover = false;
 } );
 
 app.controller( 'AuthorController', function( $scope ) {
@@ -27,4 +33,8 @@ app.controller( 'AuthorController', function( $scope ) {
 	$scope.view.greeting = "AUTHORS ARE BORING";
 	$scope.blah = function() {}
 
+} )
+app.controller( 'BookController', function( $scope ) {
+	$scope.view = {};
+	$scope.view.greeting = "BOOKS ARE BORING";
 } )

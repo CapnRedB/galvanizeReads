@@ -1,10 +1,22 @@
 <div class="container-fluid">
 		<div class="row">
-		<div class="col s5 offset-s1 teal center-align big">
-			Books
+		<div ng-mouseenter="view.bookHover=true" ng-mouseleave="view.bookHover=false" class="col s5 offset-s1 blue big">
+				<a href="/books"><img src="http://www.bradleysbookoutlet.com/wp-content/uploads/2013/06/bradleys-book-outlet-books-only-logo.png" alt="" /></a>
+				<div class="container-fluid">
+				<div ng-show="view.bookHover" class="orange col s12 center-align tip valign">
+					Books
+				</div>
+			</div>
 		</div>
-		<div class="col s5 teal center-align big">
-			Authors
+		<div ng-mouseenter="view.authorHover=true" ng-mouseleave="view.authorHover=false"class="col s5 blue center-align big">
+			<a href="/authors"><img src="http://vignette4.wikia.nocookie.net/powerlisting/images/6/6b/P_author.svg/revision/latest?cb=20150731130313" alt="" /></a>
+			<div ng-show="view.authorHover"class="col s12 orange center-align tip">
+				Author
+			</div>
 		</div>
 	</div>
+		<div class="row">
+
+
+		</div>
 </div>

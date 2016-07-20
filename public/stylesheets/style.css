@@ -2,9 +2,19 @@ a {
   color: #00B7FF;
 }
 .big{
-	height:400px;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-top: 100px;
-	box-sizing: border-box;
+	height: 400px;
+	margin-top: 10%;
+	border: black 5px solid;
+
+}
+.rotateText{
+	transform: rotate(90deg);
+	transform-origin: left top 0;
+}
+img{
+	width: 100%;
+	height: 100%;
+}
+.tip{
+	z-index: 1;
 }
