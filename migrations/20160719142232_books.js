@@ -5,7 +5,6 @@ exports.up = function( knex, Promise ) {
 		table.string( 'genre' );
 		table.string( 'desc' );
 		table.string( 'coverurl' );
-		table.string( 'author' ).unsigned().index().references( 'bridge.author_id' ).onDelete( 'CASCADE' );
 	} )
 };
 

@@ -5,10 +5,9 @@ exports.up = function( knex, Promise ) {
 		table.string( 'Lname' );
 		table.string( 'bio' );
 		table.string( 'imgurl' );
-		table.integer( 'book_id' ).unsigned().index().references( 'bridge.books_id' ).onDelete( 'CASCADE' );
 	} )
 };
 
 exports.down = function( knex, Promise ) {
-
+	return knex.schema.dropTable( 'authors' );
 };
