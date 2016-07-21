@@ -3,7 +3,7 @@ exports.up = function( knex, Promise ) {
 		table.increments();
 		table.string( 'Fname' );
 		table.string( 'Lname' );
-		table.string( 'bio' );
+		table.varchar( 'bio', 5000 );
 		table.string( 'imgurl' );
 	} )
 };
