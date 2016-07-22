@@ -1,5 +1,4 @@
 var app = angular.module( 'galvanizeReads', [ 'ngRoute', 'ngAnimate' ] );
-
 app.config( function( $routeProvider, $locationProvider, $httpProvider ) {
 	$routeProvider
 		.when( '/', {
@@ -28,12 +27,18 @@ app.controller( 'IndexController', function( $scope ) {
 	$scope.view.authorHover = false;
 } );
 
-app.controller( 'AuthorController', function( $scope ) {
+app.controller( 'AuthorController', [ '$http', '$scope', function( $http, $scope ) {
+	$http( {
+		method: "GET",
+		url: '/api/authors'
+	} ).then( function( result ) {
+		$scope.view.authors = result.data;
+	} )
 	$scope.view = {};
 	$scope.view.greeting = "AUTHORS ARE BORING";
-	$scope.blah = function() {}
 
-} )
+
+} ] )
 app.controller( 'BookController', function( $scope ) {
 	$scope.view = {};
 	$scope.view.greeting = "BOOKS ARE BORING";
